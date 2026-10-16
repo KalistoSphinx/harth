@@ -338,6 +338,11 @@
     });
   }
 
+  const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+  if (closeDrawerBtn) {
+    closeDrawerBtn.addEventListener('click', closeMobileMenu);
+  }
+
   if (drawerBackdrop) {
     drawerBackdrop.addEventListener('click', closeMobileMenu);
   }

@@ -427,25 +427,57 @@ input, select, textarea {
   width: 100%;
   max-width: 360px;
   height: 100vh;
+  height: 100dvh;
   background-color: var(--color-surface-light);
   box-shadow: -8px 0 30px rgba(38, 27, 22, 0.15);
-  padding: 6rem 2.5rem 3rem;
+  padding: clamp(1.8rem, 4vw, 2.4rem) 2.2rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
   transition: transform var(--transition-slow);
-  z-index: 110;
+  z-index: 130;
+  overflow-y: auto;
 }
 
 .mobile-drawer.is-open {
   transform: translateX(0);
 }
 
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.6rem; /* Generous spacing between logo and nav items */
+  border-bottom: 1px solid var(--color-border);
+}
+
+.drawer-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(38, 27, 22, 0.08);
+  color: var(--color-text-primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.drawer-close-btn:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-surface-light);
+  transform: rotate(90deg);
+}
+
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  flex-grow: 1;
 }
 
 .mobile-nav-link {
@@ -472,7 +504,7 @@ input, select, textarea {
   inset: 0;
   background: rgba(33, 25, 20, 0.4);
   backdrop-filter: blur(4px);
-  z-index: 105;
+  z-index: 125;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-base), visibility var(--transition-base);
@@ -1657,6 +1689,10 @@ input, select, textarea {
   gap: 1rem;
 }
 
+.modal-action-row #modalAddSampleBtn {
+  flex-grow: 1;
+}
+
 /* General Dialog Modal (Directions / Info) */
 .dialog-modal-window {
   max-width: 620px;
@@ -1853,8 +1889,99 @@ input, select, textarea {
     display: none;
   }
   
+  /* Menu Section Mobile Improvements */
+  .menu-section {
+    padding: 3.8rem 0;
+  }
+
+  .menu-header-row {
+    margin-bottom: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .menu-header-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .menu-header-right .section-desc {
+    text-align: left;
+  }
+
+  .menu-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.5rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .menu-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* Compact 2-column mobile menu grid */
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .menu-card {
+    border-radius: var(--radius-md);
+  }
+
+  .menu-card-image-box {
+    aspect-ratio: 1 / 1;
+  }
+
+  .menu-card-body {
+    padding: 0.8rem 0.7rem 0.75rem;
+  }
+
+  .menu-card-category {
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.2rem;
+  }
+
+  .menu-card-title {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .menu-card-tagline {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-bottom: 0.65rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 1.95rem;
+  }
+
+  .menu-card-footer {
+    padding-top: 0.55rem;
+  }
+
+  .menu-card-price {
+    font-size: 0.95rem;
+  }
+
+  .menu-card-add-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 0.95rem;
   }
   
   .story-grid {
@@ -1894,37 +2021,163 @@ input, select, textarea {
     grid-column: span 1;
   }
   
-  .modal-window {
-    border-radius: var(--radius-lg);
+  /* Pop-Up Modal Mobile Fixes */
+  .modal-backdrop {
+    padding: 0.65rem 0.5rem;
+    align-items: center;
   }
-  
+
+  .modal-window {
+    max-height: 86dvh;
+    max-height: 86vh;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    margin: auto 0;
+  }
+
+  .product-modal-window {
+    padding: 1.25rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .dialog-modal-window {
+    padding: 1.4rem 1.1rem calc(1.4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .modal-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-close-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Pop-Up Modal: Column alignment on mobile like before */
   .product-modal-top {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.4rem;
+    gap: 1.2rem;
+    padding-bottom: 1.3rem;
+    margin-bottom: 1.3rem;
   }
 
   .product-modal-thumb-box {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
   }
 
   .product-modal-intro {
     padding-right: 0;
     align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .product-modal-category {
+    font-size: 0.65rem;
+    margin-bottom: 0.25rem;
   }
 
   .product-modal-title-row {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
   }
-  
-  .menu-header-right {
-    align-items: flex-start;
-    text-align: left;
+
+  .product-modal-title {
+    font-size: 1.45rem;
+    line-height: 1.2;
+    text-align: center;
   }
-  
-  .menu-header-right .section-desc {
-    text-align: left;
+
+  .product-modal-price {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .product-modal-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* Detail Blocks on Mobile */
+  .modal-detail-block {
+    margin-bottom: 0.95rem;
+  }
+
+  .modal-detail-heading {
+    font-size: 0.68rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .ingredient-pill,
+  .note-pill {
+    font-size: 0.74rem;
+    padding: 0.28rem 0.65rem;
+  }
+
+  .dietary-notice {
+    font-size: 0.76rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .custom-pill {
+    font-size: 0.74rem;
+    padding: 0.32rem 0.7rem;
+  }
+
+  /* Action Buttons: "Back to Menu" stacked underneath "Add to Tasting List" */
+  .modal-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.65rem;
+    padding-top: 1.2rem;
+    margin-top: 0.8rem;
+  }
+
+  .modal-action-row .btn {
+    width: 100%;
+    max-width: 100%;
+    flex: initial !important;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    padding: 0.82rem 1.2rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+
+  .modal-action-row #modalAddSampleBtn {
+    flex-grow: 0;
+    width: 100%;
+    order: 1; /* Add to Tasting List is on top */
+  }
+
+  .modal-action-row #modalCloseSecondaryBtn,
+  .modal-action-row .btn-secondary {
+    width: 100%;
+    padding: 0.72rem 1.2rem;
+    font-size: 0.85rem;
+    order: 2; /* Back to Menu button comes under Add to List */
+  }
+}
+
+/* Extra small devices (<= 330px) */
+@media (max-width: 330px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 }
