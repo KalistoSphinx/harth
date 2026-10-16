@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARTH COFFEE — Specialty Coffee & Warm Spaces</title>
+  <meta name="description" content="Thoughtfully sourced beans, seasonal flavours and a cozy space to slow down. Visit our three specialty café locations or explore our seasonal menu.">
+
+  <!-- Google Fonts: Editorial Serif + Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#top" class="brand-logo" aria-label="Harth Coffee - Return to top">
+        <span class="brand-name">HARTH</span>
+        <span class="brand-sub">COFFEE</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#top" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#locations" class="nav-link">Locations</a>
+        <a href="#values" class="nav-link">Values</a>
+      </nav>
+
+      <!-- Header Actions (Mobile menu toggle) -->
+      <div class="header-actions">
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="brand-name">HARTH</span>
+        <span class="brand-sub">COFFEE</span>
+      </div>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#top" class="mobile-nav-link">Home</a>
+      <a href="#menu" class="mobile-nav-link">Menu</a>
+      <a href="#story" class="mobile-nav-link">Our Story</a>
+      <a href="#locations" class="mobile-nav-link">Locations</a>
+      <a href="#values" class="mobile-nav-link">Values</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <p style="font-size: 0.88rem; color: var(--color-coffee-brown); font-weight: 600; text-align: center;">
+        HARTH COFFEE
+      </p>
+      <p style="font-size: 0.82rem; color: var(--color-text-muted); text-align: center;">
+        Mon–Sun: 7am – 6pm · 3 Locations
+      </p>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         HERO SECTION (Split Layout)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Content -->
+          <div class="hero-content reveal">
+            <span class="eyebrow">SPECIALTY COFFEE · A WARMER TODAY</span>
+            <h1 class="hero-heading">
+              More<br>
+              than just<br>
+              <span class="hero-accent">coffee.</span>
+            </h1>
+            <p class="hero-description">
+              Thoughtfully sourced beans, seasonal flavours and a cozy space to slow down.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#menu" class="btn btn-primary" id="heroExploreBtn">
+                Explore Our Menu <span class="arrow-icon">→</span>
+              </a>
+              <button type="button" class="btn btn-secondary" id="heroStoryBtn">
+                <span class="play-circle">
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor">
+                    <path d="M1 1.5L9 6L1 10.5V1.5Z"/>
+                  </svg>
+                </span>
+                Watch Our Story
+              </button>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Happy Customers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.8 <span class="stat-star">★</span></span>
+                <span class="stat-label">Average Rating</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Locations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Column -->
+          <div class="hero-visual reveal delay-1">
+            <div class="hero-image-wrapper">
+              <img 
+                src="assets/images/hero-cafe.jpg" 
+                alt="Sunlit artisanal cafe interior with wooden furniture, bar counter, and gentle morning sunlight" 
+                class="hero-image"
+                loading="eager"
+              >
+              <div class="hero-image-overlay"></div>
+              
+              <!-- Subtle Editorial Stamps on Photo -->
+              <div class="hero-wall-stamp">
+                GOOD COFFEE<br>BRIGHTER DAYS
+              </div>
+              <div class="hero-badge-stamp">
+                Good Coffee<br>Brighter Days
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED MENU SECTION ("Seasonal favourites.")
+         ========================================================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        
+        <!-- Header Row -->
+        <div class="menu-header-row reveal">
+          <div class="menu-header-left">
+            <span class="eyebrow">OUR MENU</span>
+            <h2 class="section-title">Seasonal favourites.</h2>
+          </div>
+          <div class="menu-header-right">
+            <p class="section-desc">
+              Crafted with care, using the finest ingredients. From bold classics to unique seasonal creations, there's something for every coffee lover.
+            </p>
+            <button type="button" class="btn btn-outline" id="viewAllMenuBtn">
+              View Full Menu <span class="arrow-icon">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="menu-tabs reveal delay-1" role="tablist" aria-label="Menu Categories">
+          <button type="button" class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Items</button>
+          <button type="button" class="tab-btn" data-filter="coffee" role="tab" aria-selected="false">Coffee</button>
+          <button type="button" class="tab-btn" data-filter="cold-brew" role="tab" aria-selected="false">Cold Brew & Specialty</button>
+          <button type="button" class="tab-btn" data-filter="all-day" role="tab" aria-selected="false">All Day Kitchen</button>
+          <button type="button" class="tab-btn" data-filter="bakery" role="tab" aria-selected="false">Bakery & Pastry</button>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid" id="menuGrid" aria-live="polite">
+          <!-- Rendered dynamically by script.js -->
+          <!-- Static accessible fallback below -->
+          <article class="menu-card" data-id="classic-latte">
+            <div class="menu-card-image-box">
+              <img src="assets/images/latte.jpg" alt="Classic Latte with silky microfoam latte art" class="menu-card-img" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div>
+                <span class="menu-card-category">COFFEE</span>
+                <h3 class="menu-card-title">Classic Latte</h3>
+                <p class="menu-card-tagline">Rich. Smooth. Timeless.</p>
+              </div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$4.50</span>
+                <button type="button" class="menu-card-add-btn" aria-label="View Classic Latte details">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-id="iced-vanilla">
+            <div class="menu-card-image-box">
+              <img src="assets/images/iced-vanilla.jpg" alt="Iced Vanilla cold brew with sweet cream" class="menu-card-img" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div>
+                <span class="menu-card-category">COLD BREW</span>
+                <h3 class="menu-card-title">Iced Vanilla</h3>
+                <p class="menu-card-tagline">Cool. Creamy. Refreshing.</p>
+              </div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$5.00</span>
+                <button type="button" class="menu-card-add-btn" aria-label="View Iced Vanilla details">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-id="avocado-toast">
+            <div class="menu-card-image-box">
+              <img src="assets/images/avocado-toast.jpg" alt="Avocado toast on thick artisanal sourdough" class="menu-card-img" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div>
+                <span class="menu-card-category">ALL DAY</span>
+                <h3 class="menu-card-title">Avocado Toast</h3>
+                <p class="menu-card-tagline">Fresh. Wholesome. Delicious.</p>
+              </div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$8.50</span>
+                <button type="button" class="menu-card-add-btn" aria-label="View Avocado Toast details">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-id="almond-croissant">
+            <div class="menu-card-image-box">
+              <img src="assets/images/almond-croissant.jpg" alt="Golden flaky almond croissant" class="menu-card-img" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div>
+                <span class="menu-card-category">BAKERY</span>
+                <h3 class="menu-card-title">Almond Croissant</h3>
+                <p class="menu-card-tagline">Buttery. Flaky. Irresistible.</p>
+              </div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">$4.90</span>
+                <button type="button" class="menu-card-add-btn" aria-label="View Almond Croissant details">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OUR STORY SECTION ("A space for good people.")
+         ========================================================================== -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          
+          <!-- Column 1: Dark Brown Panel -->
+          <div class="story-panel-dark reveal">
+            <div>
+              <span class="eyebrow">OUR STORY</span>
+              <h2 class="story-title">A space for good people.</h2>
+              <p>
+                Harth Coffee started with a simple idea — great coffee brings people together. We're here to create a welcoming space for meaningful conversations, slower days and a brighter tomorrow.
+              </p>
+            </div>
+            <div>
+              <a href="#values" class="btn btn-outline-light">
+                Our Story <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Large Center Photo -->
+          <div class="story-panel-image reveal delay-1">
+            <img 
+              src="assets/images/story-table.jpg" 
+              alt="Sunlit wooden cafe table with artisanal coffee, book, and dried florals" 
+              loading="lazy"
+            >
+          </div>
+
+          <!-- Column 3: Light Cream Slogan Panel -->
+          <div class="story-panel-light reveal delay-2">
+            <div class="story-slogan">
+              <span class="story-slogan-word">GOOD</span>
+              <span class="story-slogan-word">PEOPLE</span>
+              <span class="story-slogan-word">GOOD</span>
+              <span class="story-slogan-word">COFFEE</span>
+              <div class="story-slogan-divider"></div>
+              <p class="story-slogan-sub">
+                Always<br>
+                A Warmer<br>
+                Tomorrow.
+              </p>
+            </div>
+
+            <!-- Subtle Decorative Botanical SVG -->
+            <svg class="story-leaf-deco" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M50 0 C60 30 90 40 100 50 C70 60 60 90 50 100 C40 70 10 60 0 50 C30 40 40 10 50 0 Z" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BRAND VALUES SECTION
+         ========================================================================== -->
+    <section class="values-section" id="values">
+      <div class="container">
+        <div class="values-grid">
+          
+          <!-- Value 1 -->
+          <div class="value-item reveal">
+            <div class="value-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="value-title">Sustainably Sourced</h3>
+              <p class="value-desc">Better beans for a brighter planet.</p>
+            </div>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="value-item reveal delay-1">
+            <div class="value-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="value-title">Locally Roasted</h3>
+              <p class="value-desc">Supporting local communities.</p>
+            </div>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="value-item reveal delay-2">
+            <div class="value-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="value-title">Cozy Spaces</h3>
+              <p class="value-desc">Designed for connection.</p>
+            </div>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="value-item reveal delay-3">
+            <div class="value-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="value-title">Specialty Drinks</h3>
+              <p class="value-desc">Seasonal. Creative. Delicious.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LOCATIONS SECTION
+         ========================================================================== -->
+    <section class="locations-section" id="locations">
+      <div class="container">
+        
+        <div class="locations-header reveal">
+          <span class="eyebrow">FIND A TABLE</span>
+          <h2 class="section-title">Our Spaces.</h2>
+          <p class="section-desc" style="margin: 0.8rem auto 0;">
+            Three neighborhood sanctuaries designed for mindful mornings, creative work, and quiet reunions.
+          </p>
+        </div>
+
+        <div class="locations-grid">
+          
+          <!-- Location 1 -->
+          <article class="location-card reveal">
+            <div class="location-image-box">
+              <img src="assets/images/location-flagship.jpg" alt="Downtown Flagship Cafe" class="location-img" loading="lazy">
+              <span class="location-badge">Flagship</span>
+            </div>
+            <div class="location-card-body">
+              <h3 class="location-title">Downtown Flagship</h3>
+              <p class="location-address">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                424 St. Clair Avenue, Suite 100
+              </p>
+              <div class="location-details">
+                <div class="location-info-row">
+                  <span class="location-info-label">Hours</span>
+                  <span class="location-info-val">Daily: 7:00 AM – 6:00 PM</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Atmosphere</span>
+                  <span class="location-info-val">Communal oak & Modbar</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Contact</span>
+                  <span class="location-info-val">(555) 234-8901</span>
+                </div>
+              </div>
+              <div class="location-actions">
+                <button type="button" class="location-link open-directions-btn" data-location="flagship">
+                  Get Directions →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Location 2 -->
+          <article class="location-card reveal delay-1">
+            <div class="location-image-box">
+              <img src="assets/images/location-roastery.jpg" alt="Arts District Roastery" class="location-img" loading="lazy">
+              <span class="location-badge">Roastery & Lab</span>
+            </div>
+            <div class="location-card-body">
+              <h3 class="location-title">Arts District Roastery</h3>
+              <p class="location-address">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                890 Mercer Street, Building B
+              </p>
+              <div class="location-details">
+                <div class="location-info-row">
+                  <span class="location-info-label">Hours</span>
+                  <span class="location-info-val">Mon–Sat: 6:30 AM – 7:00 PM</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Atmosphere</span>
+                  <span class="location-info-val">Probat Roaster & Plant Patio</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Contact</span>
+                  <span class="location-info-val">(555) 782-4419</span>
+                </div>
+              </div>
+              <div class="location-actions">
+                <button type="button" class="location-link open-directions-btn" data-location="roastery">
+                  Get Directions →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Location 3 -->
+          <article class="location-card reveal delay-2">
+            <div class="location-image-box">
+              <img src="assets/images/location-conservatory.jpg" alt="West End Conservatory" class="location-img" loading="lazy">
+              <span class="location-badge">Botanical</span>
+            </div>
+            <div class="location-card-body">
+              <h3 class="location-title">West End Conservatory</h3>
+              <p class="location-address">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                1420 Oakridge Way, Garden Row
+              </p>
+              <div class="location-details">
+                <div class="location-info-row">
+                  <span class="location-info-label">Hours</span>
+                  <span class="location-info-val">Daily: 7:30 AM – 5:00 PM</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Atmosphere</span>
+                  <span class="location-info-val">Glasshouse & Botanical Teas</span>
+                </div>
+                <div class="location-info-row">
+                  <span class="location-info-label">Contact</span>
+                  <span class="location-info-val">(555) 419-8802</span>
+                </div>
+              </div>
+              <div class="location-actions">
+                <button type="button" class="location-link open-directions-btn" data-location="conservatory">
+                  Get Directions →
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER & NEWSLETTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Top Row -->
+      <div class="footer-top-grid">
+        
+        <!-- Left: Brand -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-name">HARTH</span>
+            <span class="brand-sub">COFFEE</span>
+          </div>
+          <p class="footer-tagline">
+            Thoughtfully sourced beans, seasonal flavours and a cozy space to slow down.
+          </p>
+        </div>
+
+        <!-- Center: Newsletter -->
+        <div class="footer-newsletter">
+          <h3 class="newsletter-title">Join our newsletter</h3>
+          <p class="newsletter-subtitle">Be the first to know about new drinks, events and more.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                id="newsletterEmail" 
+                placeholder="Your email address" 
+                aria-label="Your email address"
+                required
+              >
+              <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
+                →
+              </button>
+            </div>
+            <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Right: Social Links & Watermark -->
+        <div class="footer-right">
+          <div class="footer-social-links">
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harth Coffee on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harth Coffee on TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harth Coffee on Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <path d="M8 8a4 4 0 0 1 8 0c0 3-2 5-4 5s-2 2-2 4"></path>
+              </svg>
+            </a>
+            <!-- Spotify -->
+            <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harth Coffee on Spotify">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14.5c2.5-1 5.5-1 8 0"></path>
+                <path d="M7 11.5c3-1.5 7-1.5 10 0"></path>
+                <path d="M6 8.5c4-1.8 8.5-1.8 12 0"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-watermark">
+            A<br>
+            WARMER<br>
+            TOMORROW
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p>© 2024 Harth Coffee. All rights reserved.</p>
+        <nav class="footer-nav" aria-label="Legal & Support">
+          <a href="#top" class="footer-legal-link">Privacy Policy</a>
+          <a href="#top" class="footer-legal-link">Terms of Service</a>
+          <a href="#locations" class="footer-legal-link">Contact</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PRODUCT DETAILS MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle" aria-hidden="true" data-lenis-prevent>
+    <div class="modal-window product-modal-window" data-lenis-prevent>
+      <!-- Close Button -->
+      <button type="button" class="modal-close-btn" id="closeProductModalBtn" aria-label="Close product details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Top Section: Image on Left, Title & Description on Right -->
+      <div class="product-modal-top">
+        <div class="product-modal-thumb-box">
+          <img src="" alt="" class="product-modal-thumb-img" id="productModalImg">
+        </div>
+
+        <div class="product-modal-intro">
+          <span class="product-modal-category" id="productModalCategory">COFFEE</span>
+          <div class="product-modal-title-row">
+            <h2 class="product-modal-title" id="productModalTitle">Product Name</h2>
+            <div class="product-modal-price" id="productModalPrice">$0.00</div>
+          </div>
+          <p class="product-modal-desc" id="productModalDesc">Full product description.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Everything Else Full Width -->
+      <div class="product-modal-bottom">
+        <!-- Ingredients -->
+        <div class="modal-detail-block" id="modalIngredientsBlock">
+          <h4 class="modal-detail-heading">Ingredients</h4>
+          <div class="pill-group" id="modalIngredientsList"></div>
+        </div>
+
+        <!-- Flavor Profile -->
+        <div class="modal-detail-block" id="modalFlavorBlock">
+          <h4 class="modal-detail-heading">Tasting Notes & Profile</h4>
+          <div class="pill-group" id="modalFlavorList"></div>
+        </div>
+
+        <!-- Dietary Info -->
+        <div class="modal-detail-block" id="modalDietaryBlock">
+          <h4 class="modal-detail-heading">Dietary & Allergen Guidance</h4>
+          <p class="dietary-notice" id="modalDietaryInfo">Vegetarian</p>
+        </div>
+
+        <!-- Size / Preparation -->
+        <div class="modal-detail-block" id="modalSizeBlock">
+          <h4 class="modal-detail-heading">Serving Size / Preparation</h4>
+          <div class="custom-options" id="modalSizeList"></div>
+        </div>
+
+        <!-- Action -->
+        <div class="modal-action-row">
+          <button type="button" class="btn btn-primary" id="modalAddSampleBtn" style="flex-grow: 1;">
+            Add to Tasting List <span class="arrow-icon">→</span>
+          </button>
+          <button type="button" class="btn btn-secondary" id="modalCloseSecondaryBtn">
+            Back to Menu
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DIRECTIONS / MAP MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="directionsModal" role="dialog" aria-modal="true" aria-labelledby="directionsModalTitle" aria-hidden="true" data-lenis-prevent>
+    <div class="modal-window dialog-modal-window" style="max-width: 620px;" data-lenis-prevent>
+      <button type="button" class="modal-close-btn" id="closeDirectionsModalBtn" aria-label="Close directions">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <span class="eyebrow">VISIT US</span>
+      <h2 class="section-title" id="directionsModalTitle">Getting Here.</h2>
+      <div id="directionsContent" style="margin-top: 1rem;">
+        <!-- Filled dynamically -->
+      </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-dot"></span>
+    <span id="toastMessage">Action completed successfully.</span>
+  </div>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="js/lenis.min.js"></script>
+
+  <!-- Main Application Logic -->
+  <script src="js/script.js"></script>
+</body>
+</html>
